@@ -39,6 +39,12 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'jpo/vim-railscasts-theme'
 
+" Let's do some Go baby
+Plugin 'fatih/vim-go'
+
+" Autocomplete for C-Family Languages
+Plugin 'Valloric/YouCompleteMe'
+
 
 
 " All of your Plugins must be added before the following line
@@ -81,7 +87,6 @@ set shiftwidth=2
 au BufWritePost .vimrc so $MYVIMRC
 
 nnoremap Q <nop>
-set background=dark
 colorscheme railscasts
 
 set shell=/bin/bash\ --login
