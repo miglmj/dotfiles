@@ -5,9 +5,9 @@ export ZSH=/Users/miguelmejia/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set-option this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="avit"
-
 # Uncomment the following line to use case-sensitive completion.
+ZSH_THEME="pure"
+
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
@@ -49,7 +49,7 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx tmux tmuxinator wd powerline rails)
+plugins=(git brew osx tmux tmuxinator wd powerline golang)
 
 # User configuration
 

@@ -1,6 +1,12 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Force vim to load local vimrc if present
+set exrc
+" Restrict commands allowed in local vim, disallowing commands that write to
+" file or execute shell commands
+" set secure
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -45,6 +51,15 @@ Plugin 'fatih/vim-go'
 " Autocomplete for C-Family Languages
 Plugin 'Valloric/YouCompleteMe'
 
+" Vim snippets
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 
 
 " All of your Plugins must be added before the following line
@@ -87,9 +102,9 @@ set shiftwidth=2
 au BufWritePost .vimrc so $MYVIMRC
 
 nnoremap Q <nop>
-colorscheme railscasts
+colorscheme tomorrow-night
 
-set shell=/bin/bash\ --login
+set shell=/bin/zsh\ --login
 set scrolloff=0
 set incsearch
 set ignorecase
@@ -103,3 +118,4 @@ set shiftround
 inoremap <C-c> <Esc>
 
 set number
+hi Normal ctermbg=NONE
