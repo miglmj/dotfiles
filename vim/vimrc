@@ -50,9 +50,11 @@ Plugin 'fatih/vim-go'
 
 " Autocomplete for C-Family Languages
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'majutsushi/tagbar'
+
+Plugin 'SirVer/ultisnips'
 
 " Vim snippets
-Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
