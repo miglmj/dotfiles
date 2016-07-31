@@ -43,6 +43,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'christoomey/vim-tmux-navigator'
 
+" Python PEP8
+Plugin 'nvie/vim-flake8'
+
 Plugin 'jpo/vim-railscasts-theme'
 
 " Let's do some Go baby
@@ -50,11 +53,20 @@ Plugin 'fatih/vim-go'
 
 " Autocomplete for C-Family Languages
 Plugin 'Valloric/YouCompleteMe'
+"Generate config for YCM
+Plugin 'rdnetto/YCM-Generator'
+
+"Display object tags
 Plugin 'majutsushi/tagbar'
 
+" Javascript/Node Stuff
+Plugin 'pangloss/vim-javascript'
+Plugin 'moll/vim-node'
 
+Plugin 'vasconcelloslf/vim-interestingwords'
 
-
+" Vim Surround
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -77,10 +89,9 @@ filetype plugin indent on    " required
 " Open NERDTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
-" turn on syntax highlighting
-syntax on
-syntax sync fromstart
-set autoread
+" Toggle Tagbar with Ctrl+t
+map <C-t> :TagbarToggle<CR>
+
 
 " disable arrows, let's see how long this lasts
 noremap <Up> <NOP>
@@ -89,16 +100,12 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 
-set ts=2
-set shiftwidth=2
-
 " auto-load vimrc after saving
 au BufWritePost .vimrc so $MYVIMRC
 
 nnoremap Q <nop>
-colorscheme tomorrow-night
 
-set shell=/bin/zsh\ --login
+set shell=/bin/zsh
 set scrolloff=0
 set incsearch
 set ignorecase
@@ -113,3 +120,21 @@ inoremap <C-c> <Esc>
 
 set number
 hi Normal ctermbg=NONE
+
+let g:syntastic_javascript_checkers = ['eslint']
+" Mouse, finally!
+:set mouse=a
+
+colorscheme Monokai
+set ts=4
+set expandtab
+set shiftwidth=4
+let python_highlight_all = 1
+
+" turn on syntax highlighting
+syntax on
+syntax sync fromstart
+set autoread
+:tnoremap <Esc> <C-\><C-n>
+let $PATH = '/usr/local/bin:'.$PATH
+let g:ycm_python_binary_path = 'python'

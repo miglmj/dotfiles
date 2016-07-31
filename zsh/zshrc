@@ -92,6 +92,7 @@ alias tmuxconfig="vim ~/.tmux.conf"
 alias bert="bundle exec rake test"
 alias ..="cd .."
 alias refreshlib="/Applications/Plex\ Media\ Server.app/contents/MacOS/Plex\ Media\ Scanner -s"
+alias vim="nvim"
 
 
 
@@ -103,3 +104,4 @@ eval "$(rbenv init -)"
 
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
