@@ -22,8 +22,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -49,7 +47,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'jpo/vim-railscasts-theme'
 
 " Let's do some Go baby
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 
 " Autocomplete for C-Family Languages
 Plugin 'Valloric/YouCompleteMe'
@@ -106,13 +104,11 @@ au BufWritePost .vimrc so $MYVIMRC
 nnoremap Q <nop>
 
 set shell=/bin/zsh
-set scrolloff=0
 set incsearch
 set ignorecase
 set smartcase
 set scrolloff=0
 set autoindent
-set smartindent
 set shiftround
 
 "C-c send enter in insert mode
@@ -138,3 +134,11 @@ set autoread
 :tnoremap <Esc> <C-\><C-n>
 let $PATH = '/usr/local/bin:'.$PATH
 let g:ycm_python_binary_path = 'python'
+
+set backspace =indent,eol,start " Make backspace work as it should
+set splitright
+set splitbelow
+set cursorline
+set wrapscan
+
+
