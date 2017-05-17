@@ -141,12 +141,17 @@ set autoread
 :tnoremap <Esc> <C-\><C-n>
 let $PATH = '/usr/local/bin:'.$PATH
 let g:ycm_python_binary_path = 'python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 set backspace =indent,eol,start " Make backspace work as it should
 set splitright
 set splitbelow
 set cursorline
 set wrapscan
+
+nnoremap <silent> vv <C-w>v
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-s> :terminal<CR>
 
 let g:syntastic_javascript_checkers = ['eslint']
 
