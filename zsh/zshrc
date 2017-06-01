@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/miguelmejia/.oh-my-zsh
+export ZSH=/Users/mejmigue/.oh-my-zsh
 
 # set-option name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -75,7 +75,7 @@ fi
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Load tmuxinator autocompletion
-source ~/.oh-my-zsh/tmuxinator.zsh
+# source ~/.oh-my-zsh/tmuxinator.zsh
 
 # set-option personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -91,20 +91,21 @@ alias vimreload="source ~/.vimrc"
 alias tmuxconfig="vim ~/.tmux.conf"
 alias bert="bundle exec rake test"
 alias ..="cd .."
-alias refreshlib="/Applications/Plex\ Media\ Server.app/contents/MacOS/Plex\ Media\ Scanner -s"
 alias vim="nvim"
+alias mc="sshfs mejmigue@mejmigue.aka.corp.amazon.com:/home/mejmigue/ ~/remote_desktop -p 22 -o reconnect"
+alias uc="umount ~/remote_desktop"
 
 
 
 # Set $GOPATH
 export GOPATH="$HOME/Go"
 export PATH=$PATH:$GOPATH/bin
-
-export PATH="$PATH:`yarn global bin`"
-
 eval "$(rbenv init -)"
 
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/Users/mejmigue/bin:$PATH"

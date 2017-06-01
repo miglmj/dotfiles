@@ -37,13 +37,12 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 " Syntastic
-let g:syntastic_javascript_checkers = ['eslint']
 Plugin 'scrooloose/syntastic'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'christoomey/vim-tmux-navigator'
 
 " Python PEP8
-Plugin 'nvie/vim-flake8'
+" Plugin 'nvie/vim-flake8'
 
 Plugin 'jpo/vim-railscasts-theme'
 
@@ -59,17 +58,17 @@ Plugin 'rdnetto/YCM-Generator'
 Plugin 'majutsushi/tagbar'
 
 " Javascript/Node Stuff
-Plugin 'pangloss/vim-javascript'
-Plugin 'moll/vim-node'
-Plugin 'mxw/vim-jsx'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'vasconcelloslf/vim-interestingwords'
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'moll/vim-node'
+" Plugin 'mxw/vim-jsx'
+" Plugin 'othree/javascript-libraries-syntax.vim'
+" Plugin 'vasconcelloslf/vim-interestingwords'
 
 " Vim Surround
 Plugin 'tpope/vim-surround'
 
 " handlebars support
-Plugin 'mustache/vim-mustache-handlebars'
+" Plugin 'mustache/vim-mustache-handlebars'
 
 " Polyglot
 Plugin 'sheerun/vim-polyglot'
